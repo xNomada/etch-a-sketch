@@ -21,6 +21,20 @@
 
 .grid{
   background-color: antiquewhite;
-  width: 50%;
-  height: 50%;
+  width: 75vh;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row{
+  display: flex;
+}
+
+.gridElement{
+  flex: 1 1 auto;
+  border: 1px solid black;
+  /* padding: 10px */
 }
