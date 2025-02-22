@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid{
+  background-color: antiquewhite;
+  width: 50%;
+  height: 50%;
+}
