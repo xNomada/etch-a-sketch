@@ -27,6 +27,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  border: 1px solid black;
 }
 
 .row{
@@ -35,6 +36,5 @@
 
 .gridElement{
   flex: 1 1 auto;
-  border: 1px solid black;
-  /* padding: 10px */
+  
 }

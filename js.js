@@ -5,7 +5,6 @@ const input = parseInt(prompt("Choose a number between 1 and 100:"));
 
 function createGridElement(){
   const gridElement = document.createElement("div");
-  gridElement.style.backgroundColor = "red";
   gridElement.classList.add("gridElement")
   return gridElement;
 }
@@ -23,3 +22,13 @@ function createGrid(){
 }
 
 createGrid();
+
+const gridElements = document.querySelectorAll(".gridElement");
+
+gridElements.forEach(div => {
+  div.addEventListener("mouseover", e => {
+    let target = e.target;
+    target.style.backgroundColor = "blue";
+    
+  })
+})
