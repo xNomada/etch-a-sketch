@@ -27,6 +27,7 @@ function startExecution(){
   const btn = document.querySelector(".button");
   btn.addEventListener("click", () => {
     const input = parseInt(prompt("Choose a number between 1 and 100:"));
+    
     if(input > 0 && input <= 100){
       createGrid(input);
       const gridElements = document.querySelectorAll(".gridElement");
@@ -36,13 +37,12 @@ function startExecution(){
         let target = e.target;
         target.style.backgroundColor = "#" + getRandomColor();
     
-  })
-})
-
+        })
+      })
+    } else {
+      alert('Invalid Number');
     }
-    console.log(input);
-  })
-  
+  })  
 }
 
 startExecution();
