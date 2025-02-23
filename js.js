@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector(".grid");
-const input = parseInt(prompt("Choose a number between 1 and 100:"));
+
+
 
 
 
@@ -9,12 +10,12 @@ function createGridElement(){
   return gridElement;
 }
 
-function createGrid(){
-  for (let i = 0; i < input; i++){
+function createGrid(size){
+  for (let i = 0; i < size; i++){
     const row = createGridElement();
     row.classList.add("row");
     gridContainer.appendChild(row);
-    for(let j = 0; j < input; j++){
+    for(let j = 0; j < size; j++){
       const col = createGridElement();
       row.appendChild(col);
     }
@@ -26,14 +27,28 @@ function getRandomColor(){
   return randomColor;
 }
 
-createGrid();
+function startExecution(){
+  const btn = document.querySelector(".button");
+  btn.addEventListener("click", () => {
+    const input = parseInt(prompt("Choose a number between 1 and 100:"));
+    if(input > 0 && input <= 100){
+      createGrid(input);
+      const gridElements = document.querySelectorAll(".gridElement");
 
-const gridElements = document.querySelectorAll(".gridElement");
-
-gridElements.forEach(div => {
-  div.addEventListener("mouseover", e => {
-    let target = e.target;
-    target.style.backgroundColor = "#" + getRandomColor();
+      gridElements.forEach(div => {
+        div.addEventListener("mouseover", e => {
+        let target = e.target;
+        target.style.backgroundColor = "#" + getRandomColor();
     
   })
 })
+
+    }
+    console.log(input);
+  })
+  
+}
+
+startExecution();
+
+
