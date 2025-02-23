@@ -52,3 +52,10 @@ function startExecution(){
 startExecution();
 
 
+const resetBtn = document.querySelector('.reset');
+
+resetBtn.addEventListener('click', () => {
+  while(gridContainer.firstChild){
+    gridContainer.removeChild(gridContainer.lastChild);
+  }
+})
