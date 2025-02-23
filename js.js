@@ -21,6 +21,11 @@ function createGrid(){
   }
 }
 
+function getRandomColor(){
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  return randomColor;
+}
+
 createGrid();
 
 const gridElements = document.querySelectorAll(".gridElement");
@@ -28,7 +33,7 @@ const gridElements = document.querySelectorAll(".gridElement");
 gridElements.forEach(div => {
   div.addEventListener("mouseover", e => {
     let target = e.target;
-    target.style.backgroundColor = "blue";
+    target.style.backgroundColor = "#" + getRandomColor();
     
   })
 })
