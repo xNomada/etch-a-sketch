@@ -1,9 +1,5 @@
 const gridContainer = document.querySelector(".grid");
 
-
-
-
-
 function createGridElement(){
   const gridElement = document.createElement("div");
   gridElement.classList.add("gridElement")
@@ -50,7 +46,6 @@ function startExecution(){
 }
 
 startExecution();
-
 
 const resetBtn = document.querySelector('.reset');
 
